@@ -78,6 +78,9 @@ def sendMail(server, port, user, password, from_email, to_email, subject, body):
             mailserver.login(user, password)
             textPad.insert('end',"\tSuccessfully logged in using " + user + ":" + password + "\n")
             textPad.see("end")
+          else:
+            input_smtp_username.delete(0, tk.END)
+            input_smtp_password.delete(0, tk.END)
           textPad.insert('end', "Trying to send referenced email\n")
           mailserver.sendmail(msg['From'], msg['To'], msg.as_string())
           textPad.insert('end',"\tMessage sent successfully!" + "\n" + "\n")
