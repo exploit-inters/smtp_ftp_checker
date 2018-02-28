@@ -4,6 +4,7 @@ from tkinter import *
 from tkinter.ttk import Separator
 from tkinter.scrolledtext import *
 import smtplib
+import tkinter as tk
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from ftplib import FTP_TLS, FTP
